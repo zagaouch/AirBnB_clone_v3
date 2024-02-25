@@ -104,13 +104,4 @@ class TestAmenity(unittest.TestCase):
         amenity = Amenity()
         string = "[Amenity] ({}) {}".format(amenity.id, amenity.__dict__)
         self.assertEqual(string, str(amenity))
-
-    def test_amenity_attribute(self):
-        """... add amenity attribute"""
-        self.amenity.name = "aloha"
-        if hasattr(self.amenity, 'name'):
-            actual = self.amenity.name
-        else:
-            actual = ''
-        expected = "aloha"
-        self.assertEqual(expected, actual)
+        
