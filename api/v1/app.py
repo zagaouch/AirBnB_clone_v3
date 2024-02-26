@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# Path: api/v1/app.py
+""" Main application"""
+
 
 from models import storage
 from api.v1.views import app_views
@@ -9,8 +10,8 @@ from flask_cors import CORS
 
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "0.0.0.0"}})
 app.register_blueprint(app_views)
+CORS(app, resources={r"/api/*": {"origins": "0.0.0.0"}})
 
 
 @app.teardown_appcontext
